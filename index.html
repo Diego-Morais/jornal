@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>Jornal Achô Sudoeste</title>
+</head>
+<body>
+
+
+    <header>
+         
+        <div class="tempo">
+            <h1>Jornal Achei Sudoeste</h1>
+            <br>
+            <br>
+            <br>
+
+            <div id="clock-widget"></div>
+
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <!-- Conteúdo do modal -->
+                  <h1>Conversor de Moedas</h1>
+                  <div class="input-container">
+                      <label for="amount">Valor em Real (BRL):</label>
+                      <input type="number" id="amount" placeholder="Insira o valor em real">
+                  </div>
+                  <div class="input-container">
+                      <label for="currency">Moeda de Destino:</label>
+                      <select id="currency">
+                          <option value="USD">Dólar Americano (USD)</option>
+                          <option value="EUR">Euro (EUR)</option>
+                          <option value="JPY">Yen Japonês (JPY)</option>
+                          <!-- Adicione outras moedas conforme necessário -->
+                      </select>
+                  </div>
+                  <div class="output-container">
+                      <label for="converted-amount">Valor Convertido:</label>
+                      <span id="converted-amount">0</span>
+                  </div>
+                  <button onclick="convertCurrency()">Converter</button>
+              </div>
+          </div>
+          <button class="converter-button" onclick="openModal()">Converter Moedas</button>          
+
+        <div class="container-fluid p-0 container-sm d-flex justify-content-center">
+
+            <div class="card text-center shadow-lg" style="width: 26rem;">
+        
+              <div class="card-header bg-white text-dark font-weight-bold">
+                TEMPO E TEMPERATURA
+              </div>
+        
+              <div class="card-body">
+                <div class="city">Cidade (Informe a cidade)</div>
+                <div class="date">...................</div>
+                <div class="container-img">
+                  <img src="./icons/unknown.png">
+                </div>
+                <div class="container-temp mx-4 my-3">
+                  <div>0</div>
+                  <span>°c</span>
+                </div>
+                <div class="weather py-2">Cidade não informada</div>
+                <div class="low-high">0°c / 0°c</div>
+              </div>
+        
+              <div class="card-footer bg-white">
+                <div class="input-group ">
+                  <div class="pesquisar">
+                  <input type="text" class="form-control bg-light" placeholder="digite o nome da cidade" aria-label="Recipient's username" aria-describedby="button-addon2">
+                  </div>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-warning text-dark" type="button" id="button-addon2">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+          </div>
+        
+          <script src="script.js"></script>
+          <script src="clock.js"></script>
+          <script src="script-moeda.js"></script>
+
+          <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
+
+       
+        <nav>
+            <ul>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Esportes</a></li>
+                <li><a href="#">Entretenimento</a></li>
+                <li><a href="#">Opinião</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <article>
+            <h2>Manchete Principal</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod mauris vel orci iaculis, at feugiat orci tincidunt.</p>
+        </article>
+
+        <article>
+            <h2>Notícia 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod mauris vel orci iaculis, at feugiat orci tincidunt.</p>
+        </article>
+
+        <article>
+            <h2>Notícia 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod mauris vel orci iaculis, at feugiat orci tincidunt.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jornal Achei Sudoeste. Todos os direitos reservados.</p>
+    </footer>
+    <!--API https://openweathermap.org/current-->
+</body>
+</html>
