@@ -13,7 +13,10 @@ function updateClock() {
 
     var formattedTime = hours + ":" + minutes + ":" + seconds;
 
-    // Atualiza o texto exibido com a hora atual
+    // Adiciona a data ao texto da hora
+    formattedTime += " - " + currentDate.toLocaleDateString();
+
+    // Atualiza o texto exibido com a hora e data atuais
     clockElement.textContent = formattedTime;
 }
 
